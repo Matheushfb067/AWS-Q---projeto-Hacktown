@@ -2,6 +2,10 @@
 
 Uma aplicação web responsiva que permite tirar fotos de objetos e identifica locais apropriados para descarte.
 
+## 🌐 Acesse a aplicação
+
+**[EcoDescarte - Versão Online](https://aws-q-projeto-hacktown.vercel.app/)**
+
 ## Funcionalidades
 
 - 📷 Captura de fotos usando a câmera do celular
