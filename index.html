@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDescarte - Análise de Objetos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 EcoDescarte</h1>
+            <p>Identifique objetos e encontre locais de descarte</p>
+        </header>
+
+        <main>
+            <div class="camera-section">
+                <div class="camera-container">
+                    <video id="camera" autoplay playsinline></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                    <img id="preview" style="display: none;" alt="Foto capturada">
+                </div>
+                
+                <div class="controls">
+                    <button id="startCamera" class="btn btn-primary">📷 Abrir Câmera</button>
+                    <button id="capturePhoto" class="btn btn-success" style="display: none;">📸 Tirar Foto</button>
+                    <button id="retakePhoto" class="btn btn-secondary" style="display: none;">🔄 Nova Foto</button>
+                    <input type="file" id="fileInput" accept="image/*" capture="environment" style="display: none;">
+                    <button id="uploadPhoto" class="btn btn-primary">📁 Escolher Foto</button>
+                </div>
+            </div>
+
+            <div class="analysis-section" id="analysisSection" style="display: none;">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Analisando objeto...</p>
+                </div>
+                
+                <div class="results" id="results" style="display: none;">
+                    <h2>Resultado da Análise</h2>
+                    <div class="object-info">
+                        <h3 id="objectName"></h3>
+                        <p id="objectDescription"></p>
+                    </div>
+                    
+                    <div class="disposal-info">
+                        <h3>🗂️ Tipo de Descarte</h3>
+                        <div class="disposal-type" id="disposalType"></div>
+                        
+                        <h3>📍 Locais de Descarte</h3>
+                        <div class="disposal-locations" id="disposalLocations"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
